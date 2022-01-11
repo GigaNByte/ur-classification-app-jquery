@@ -13,129 +13,85 @@
 </head>
 
 <body>
-    <header
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionRelative css-1vazdj7-MuiPaper-root-MuiAppBar-root">
-        <div class="app-bar">
-            <svg class="app-bar-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
-                data-testid="PhotoCameraIcon">
-                <circle cx="12" cy="12" r="3.2"></circle>
-                <path
-                    d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z">
-                </path>
-            </svg>
-            <h1 class="app-bar-title">Image
-                Classification Demo</h1>
-        </div>
-    </header>
-    <main>
-        <div class="app-container">
-            <div class="app-box">
-                <div class="app-box-result" id="app-result-id-">
-                    <div class="app-box-paper-result">
-                        <img class="result-image" src="blob:http://localhost:3000/d062b810-d75b-4861-83e7-b31eff6e063f"
-                            alt="Irish wolfhound">
-                        <div class="app-result-content">
-                            <h2 class="app-result-title">
-                                Irish wolfhound</h2>
-                            <div class="app-result-conf-container">
-                                <p class="app-result-conf-title">
-                                    Confidence:</p>
-                                <p class="app-result-conf-perc">
-                                    27%</p>
-                            </div>
-                            <p class="app-result-desc">Dog
-                                breed</p>
-                            <p class="app-result-excerpt">Irish
-                                Wolfhound The Irish Wolfhound is a historic sighthound dog breed from Ireland that
-                                has, by its presence and substantial size, inspired literature, poetry and mythology
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="add-image-button-container"><button class="add-image-button" tabindex="0"
-                        type="button"><input type="file" id="image-upload" style="display: none;">Upload
-                        next
-                        image<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button></div>
+    <div class="app-root">
+        <header>
+            <div class="app-bar">
+                <svg class="app-bar-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                    data-testid="PhotoCameraIcon">
+                    <circle cx="12" cy="12" r="3.2"></circle>
+                    <path
+                        d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z">
+                    </path>
+                </svg>
+                <h1 class="app-bar-title">Image
+                    Classification Demo</h1>
             </div>
-            <div class="MuiContainer-root MuiContainer-maxWidthLg css-qhibcd-MuiContainer-root">
-                <h3
-                    class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter css-1fyf1mq-MuiTypography-root">
-                    Recent results:</h3>
-                <div
-                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-1fuuz4t-MuiPaper-root">
-                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root">
-                        <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-iltpxr-MuiGrid-root">
-                            <div
-                                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-12jby5p-MuiPaper-root-MuiCard-root">
-                                <img class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-18bo5fu-MuiCardMedia-root"
-                                    src="blob:http://localhost:3000/73b2f271-df1a-49fb-b413-e52db105cc69" alt="Orange">
-                                <div class="MuiCardContent-root css-2r3irp-MuiCardContent-root">
-                                    <h2
-                                        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root">
-                                        Orange</h2>
-                                    <div style="display: flex;">
-                                        <p
-                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-fvtpii-MuiTypography-root">
-                                            Confidence:</p>
-                                        <p
-                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-j05aj7-MuiTypography-root">
-                                            60%</p>
-                                    </div>
-                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
-                                        Topics referred to by the same term</p>
-                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
-                                        Orange including: Orange (India) Orange Belgium Orange Egypt Orange España
-                                        (Spain) Orange Jordan Orange Moldova Orange Morocco Orange Polska (Poland)
-                                        Orange Romania</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-iltpxr-MuiGrid-root">
-                            <div
-                                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-12jby5p-MuiPaper-root-MuiCard-root">
-                                <img class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-18bo5fu-MuiCardMedia-root"
-                                    src="blob:http://localhost:3000/d062b810-d75b-4861-83e7-b31eff6e063f"
-                                    alt="Irish wolfhound">
-                                <div class="MuiCardContent-root css-2r3irp-MuiCardContent-root">
-                                    <h2
-                                        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root">
-                                        Irish wolfhound</h2>
-                                    <div style="display: flex;">
-                                        <p
-                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-fvtpii-MuiTypography-root">
-                                            Confidence:</p>
-                                        <p
-                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-130rla-MuiTypography-root">
-                                            27%</p>
-                                    </div>
-                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
-                                        Dog breed</p>
-                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
-                                        Irish Wolfhound The Irish Wolfhound is a historic sighthound dog breed from
-                                        Ireland that has, by its presence and substantial size, inspired literature,
-                                        poetry and mythology</p>
-                                </div>
-                            </div>
-                        </div>
+        </header>
+        <main>
+            <div class="app-container">
+                <div class="app-box">
+                    <div class="app-hello">
+                        <h2 class="app-hello-title">
+                            Image Classification Demo App</h2>
+                        <h3 class="app-hello-description">
+                            Upload a image to get more information about object in your photo!</h3>
                     </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <h6 class="footer-title">
-            Image Classification Demo</h6>
-        <p>
-            This Tensorflow.js demo App uses
-            <a href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet">MobileNet</a> provided by <a
-                href="https://www.tensorflow.org/">Tensorflow</a>
-        </p>
-        <p class="footer-copyright">
-            Copyright © GigaNByte<a class="" href="https://github.com/GigaNByte"></a> 2022.</p>
-    </footer>
+                    <div class="app-box-result" id="app-result-id-">
+                        <div class="app-box-paper-result">
+                            <img class="result-image" src="2560px-Camel.jpg" alt="Irish wolfhound">
+                            <div class="app-result-content">
+                                <h2 class="app-result-title">
+                                    Irish wolfhound</h2>
+                                <div class="app-result-conf-container">
+                                    <p class="app-result-conf-title">
+                                        Confidence:<span class="app-result-conf-perc">
+                                            27%</span></p>
 
+                                </div>
+                                <p class="app-result-desc">Dog
+                                    breed</p>
+                                <p class="app-result-excerpt">Irish
+                                    Wolfhound The Irish Wolfhound is a historic sighthound dog breed from Ireland that
+                                    has, by its presence and substantial size, inspired literature, poetry and mythology
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-image-button-container"><button class="add-image-button" tabindex="0"
+                            type="button"><input type="file" id="image-upload" style="display: none;">Upload
+                            next
+                            image<span class=""></span></button></div>
+                </div>
+                <div class="recent-container" id="recent-container">
+                    <h3 class="recent-title">
+                        Recent results:
+                    </h3>
+                    <div class="recent-gallery-paper">
+                        <div class="recent-gallery-container" id="recent-gallery-container">
+                            <div class="recent-gallery-single-item">
+
+                            </div>
+                            <div class="recent-gallery-single-item">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <h6 class="footer-title">
+                Image Classification Demo</h6>
+            <p>
+                This Tensorflow.js demo App uses
+                <a href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet">MobileNet</a> provided by <a
+                    href="https://www.tensorflow.org/">Tensorflow</a>
+            </p>
+            <p class="footer-copyright">
+                Copyright © GigaNByte<a class="" href="https://github.com/GigaNByte"></a> 2022.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
