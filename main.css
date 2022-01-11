@@ -96,7 +96,43 @@ main{
     object-fit: cover;
     max-height: 500px;
 }
+.image-upload{
+    display: none;
+}
+.app-box-paper-result{
+background-color: #fff;
+color: rgba(0, 0, 0, 0.87);
+border-radius: 4px;
+box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+overflow: hidden;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+.app-result-content{
+    padding: 16px;
+    padding-bottom: 24px;
+    flex-grow:1;
+}
+
+h2.app-result-title{
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.334;
+letter-spacing: 0em;
+margin-bottom: 0.35em;
+}
+.app-result-conf-containter{
+    display: flex;
+}
+.app-result-content{
+    font-weight: 400;
+font-size: 1rem;
+line-height: 1.5;
+letter-spacing: 0.00938em;
+}
 
 footer{
     padding: 48px;
 }
+
