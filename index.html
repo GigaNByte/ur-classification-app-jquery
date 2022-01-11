@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <header
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionRelative css-1vazdj7-MuiPaper-root-MuiAppBar-root">
+        <div class="app-bar">
+            <svg class="app-bar-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                data-testid="PhotoCameraIcon">
+                <circle cx="12" cy="12" r="3.2"></circle>
+                <path
+                    d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z">
+                </path>
+            </svg>
+            <h1 class="app-bar-title">Image
+                Classification Demo</h1>
+        </div>
+    </header>
+    <main>
+        <div class="app-container">
+            <div class="app-box">
+                <div class="app-box-result">
+                    <div
+                        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-12jby5p-MuiPaper-root-MuiCard-root my-node-enter-done">
+                        <img class="result-image" src="blob:http://localhost:3000/d062b810-d75b-4861-83e7-b31eff6e063f"
+                            alt="Irish wolfhound">
+                        <div class="MuiCardContent-root css-2r3irp-MuiCardContent-root">
+                            <h2
+                                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root">
+                                Irish wolfhound</h2>
+                            <div style="display: flex;">
+                                <p
+                                    class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-fvtpii-MuiTypography-root">
+                                    Confidence:</p>
+                                <p
+                                    class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-130rla-MuiTypography-root">
+                                    27%</p>
+                            </div>
+                            <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">Dog
+                                breed</p>
+                            <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">Irish
+                                Wolfhound The Irish Wolfhound is a historic sighthound dog breed from Ireland that
+                                has, by its presence and substantial size, inspired literature, poetry and mythology
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="css-d1ev6n-MuiStack-root"><button
+                        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+                        tabindex="0" type="button"><input type="file" id="image-upload" style="display: none;">Upload
+                        next
+                        image<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button></div>
+            </div>
+            <div class="MuiContainer-root MuiContainer-maxWidthLg css-qhibcd-MuiContainer-root">
+                <h3
+                    class="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter css-1fyf1mq-MuiTypography-root">
+                    Recent results:</h3>
+                <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-1fuuz4t-MuiPaper-root">
+                    <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root">
+                        <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-iltpxr-MuiGrid-root">
+                            <div
+                                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-12jby5p-MuiPaper-root-MuiCard-root">
+                                <img class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-18bo5fu-MuiCardMedia-root"
+                                    src="blob:http://localhost:3000/73b2f271-df1a-49fb-b413-e52db105cc69" alt="Orange">
+                                <div class="MuiCardContent-root css-2r3irp-MuiCardContent-root">
+                                    <h2
+                                        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root">
+                                        Orange</h2>
+                                    <div style="display: flex;">
+                                        <p
+                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-fvtpii-MuiTypography-root">
+                                            Confidence:</p>
+                                        <p
+                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-j05aj7-MuiTypography-root">
+                                            60%</p>
+                                    </div>
+                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
+                                        Topics referred to by the same term</p>
+                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
+                                        Orange including: Orange (India) Orange Belgium Orange Egypt Orange España
+                                        (Spain) Orange Jordan Orange Moldova Orange Morocco Orange Polska (Poland)
+                                        Orange Romania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-iltpxr-MuiGrid-root">
+                            <div
+                                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-12jby5p-MuiPaper-root-MuiCard-root">
+                                <img class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-18bo5fu-MuiCardMedia-root"
+                                    src="blob:http://localhost:3000/d062b810-d75b-4861-83e7-b31eff6e063f"
+                                    alt="Irish wolfhound">
+                                <div class="MuiCardContent-root css-2r3irp-MuiCardContent-root">
+                                    <h2
+                                        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root">
+                                        Irish wolfhound</h2>
+                                    <div style="display: flex;">
+                                        <p
+                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-fvtpii-MuiTypography-root">
+                                            Confidence:</p>
+                                        <p
+                                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap css-130rla-MuiTypography-root">
+                                            27%</p>
+                                    </div>
+                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
+                                        Dog breed</p>
+                                    <p class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root">
+                                        Irish Wolfhound The Irish Wolfhound is a historic sighthound dog breed from
+                                        Ireland that has, by its presence and substantial size, inspired literature,
+                                        poetry and mythology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="MuiBox-root css-1p7vffv">
+        <h6
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter MuiTypography-gutterBottom css-tcrtuv-MuiTypography-root">
+            Image Classification Demo</h6>
+        <p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter css-1xatcrf-MuiTypography-root">
+            This Tensorflow.js demo App uses <a
+                href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet">MobileNet</a> provided by <a
+                href="https://www.tensorflow.org/">Tensorflow</a></p>
+        <p class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root">
+            Copyright © GigaNByte<a
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1kgfegd-MuiTypography-root-MuiLink-root"
+                href="https://github.com/GigaNByte"></a> 2022.</p>
+    </footer>
+
+</body>
+
+</html>
