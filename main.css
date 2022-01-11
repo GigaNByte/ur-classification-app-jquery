@@ -14,7 +14,6 @@ html,body{
     display: flex;
     padding-left: 24px;
     padding-right: 24px;
-    width: 100%;
     flex-shrink: 0;
     position: relative;
     background-color: #1976d2;
@@ -132,7 +131,75 @@ line-height: 1.5;
 letter-spacing: 0.00938em;
 }
 
+
+.add-image-button{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+position: relative;
+box-sizing: border-box;
+background-color: transparent;
+outline: 0;
+border: 0;
+margin: 0;
+border-radius: 0;
+padding: 0;
+cursor: pointer;
+user-select: none;
+text-decoration: none;
+color: inherit;
+font-weight: 500;
+font-size: 0.875rem;
+line-height: 1.75;
+letter-spacing: 0.02857em;
+text-transform: uppercase;
+min-width: 64px;
+padding: 6px 16px;
+border-radius: 4px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+color: #fff;
+background-color: #1976d2;
+box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.add-image-button:hover{
+    text-decoration: none;
+background-color: #1565c0;
+box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.add-image-button-container{
+    display: flex;
+-webkit-flex-direction: row;
+-ms-flex-direction: row;
+flex-direction: row;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+padding-top: 32px;
+}
+
 footer{
     padding: 48px;
+    text-align: center;
+    font-weight: 400;
+font-size: 1rem;
+line-height: 1.75;
+letter-spacing: 0.00938em;
+text-align: center;
+color: rgba(0, 0, 0, 0.6);
+}
+h6.footer-title{
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    text-align: center;
+    margin-bottom: 0.35em;
+}
+.footer-copyright{
+    font-size: 0.875rem;
+line-height: 1.43;
+letter-spacing: 0.01071em;
 }
 
