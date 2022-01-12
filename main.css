@@ -7,6 +7,10 @@ html,body{
     line-height: 1.6;
     letter-spacing: 0.0075em;
 }
+
+.show{
+    display: initial;
+}
 p{
     margin: 0;
 }
@@ -204,8 +208,12 @@ line-height: 1.5;
 letter-spacing: 0.00938em;
 }
 
-
-.add-image-button{
+.image-upload-container{
+    width: 0px;
+ height: 0px;
+ overflow: hidden;
+}
+#add-image-button{
 display: inline-flex;
 align-items: center;
 justify-content: center;
