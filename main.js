@@ -3,8 +3,13 @@
 var showWelcomeTitlesFlag = true;
 var isImageBeingProcessed = false;
 var image;
+
+
+
 $(document).ready(function () {
 
+    $("#app-single-result").hide();
+    $("#recent-container").hide();
     /*extends click event of image-upload to add-image-button element*/
     $("#add-image-button").on("click", (e) => {
         $("#image-upload").trigger('click');
@@ -41,11 +46,12 @@ $(document).ready(function () {
             console.log(wikipediaResponse.status);
             if (wikipediaResponse.status === 200) {
 
-                $("#app-single-result #result-image").src = imgUrl;
+                $("#app-single-result #result-image").attr('src', imgUrl);
                 $("#app-single-result .app-result-desc").html(wikipediaData.description);
                 $("#app-single-result .app-result-title").html(capitalizeFirstLetter(predictions[0].className.split(',')[0]));
                 $("#app-single-result .app-result-excerpt").html(wikipediaData.title + " " + (wikipediaData.excerpt.replace(/<\/?[^>]+(>|$)/g, "").split(';')[0]));
                 $("#app-single-result  .app-result-conf-perc").html(parseFloat(predictions[0].probability).toFixed(2) + "%");
+
             }
         }).catch(err => console.error(err));
 
