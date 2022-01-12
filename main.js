@@ -5,7 +5,7 @@ var isImageBeingProcessed = false;
 var image;
 
 
-
+var imageCounter = 0;
 $(document).ready(function () {
 
     $("#app-single-result").hide();
@@ -51,7 +51,12 @@ $(document).ready(function () {
                 $("#app-single-result .app-result-title").html(capitalizeFirstLetter(predictions[0].className.split(',')[0]));
                 $("#app-single-result .app-result-excerpt").html(wikipediaData.title + " " + (wikipediaData.excerpt.replace(/<\/?[^>]+(>|$)/g, "").split(';')[0]));
                 $("#app-single-result  .app-result-conf-perc").html(parseFloat(predictions[0].probability).toFixed(2) + "%");
+                $("#app-hello").hide();
+                $("#app-single-result").show();
 
+                $('#recent-gallery-container').append(" <div class='recent-gallery-single-item id></div>")
+                $('#recent-gallery-container').last().append('#app-single-result');
+                $("#recent-gallery-container").show();
             }
         }).catch(err => console.error(err));
 
