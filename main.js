@@ -1,8 +1,5 @@
 
 
-var showWelcomeTitlesFlag = true;
-var isImageBeingProcessed = false;
-var image;
 
 
 var imageCounter = 0;
@@ -50,14 +47,20 @@ $(document).ready(function () {
                 $("#app-single-result .app-result-desc").html(wikipediaData.description);
                 $("#app-single-result .app-result-title").html(capitalizeFirstLetter(predictions[0].className.split(',')[0]));
                 $("#app-single-result .app-result-excerpt").html(wikipediaData.title + " " + (wikipediaData.excerpt.replace(/<\/?[^>]+(>|$)/g, "").split(';')[0]));
-                $("#app-single-result  .app-result-conf-perc").html(parseFloat(predictions[0].probability).toFixed(2) + "%");
+                if ((parseFloat(predictions[0].probability).toFixed(2) * 100) < 50) {
+                    $("#app-single-result .app-result-conf-perc").addClass("app-result-prob-low");
+                } else {
+                    $("#app-single-result .app-result-conf-perc").addClass("app-result-prob-high");
+                }
+                $("#app-single-result .app-result-conf-perc").html((parseFloat(predictions[0].probability).toFixed(2) * 100) + "%");
                 $("#app-hello").hide();
                 $("#app-single-result").show();
-
-                $('#recent-gallery-container').append(" <div class='recent-gallery-single-item id></div>")
-                $('#recent-gallery-container').last().append('#app-single-result');
-                $("#recent-gallery-container").show();
+                $('#recent-gallery-container').append("<div class='recent-gallery-single-item' id='recent-gallery-single-item-" + imageCounter + "'></div>")
+                $("#recent-gallery-container > #recent-gallery-single-item-" + imageCounter).append($('#app-single-result > .app-box-paper-result').clone());
+                $("#recent-container").show();
             }
+            console.log(imageCounter);
+            imageCounter++;
         }).catch(err => console.error(err));
 
     }
