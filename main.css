@@ -28,7 +28,6 @@ p{
 }
 h1.app-bar-title{
     margin: 0;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.6;
@@ -149,10 +148,24 @@ background-color: #1976d2;
 }
 .recent-gallery-single-item{
     flex-basis: 33.333333%;
-    flex-grow: 0;
     max-width: 33.333333%;
-    margin: 0;
+    flex-grow: 0;
 }
+@media screen and (max-width: 900px) {
+    .recent-gallery-single-item {
+    flex-basis: 50%;
+    max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .recent-gallery-single-item{
+  
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+
 .result-image{
     display: block;
     background-size: cover;
