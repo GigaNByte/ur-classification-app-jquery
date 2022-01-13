@@ -9,21 +9,23 @@ This app is related with the demo react app: Mobilenet Image Classification Exam
 
 
 ##  Setup
-<hr>
+
 
 This app requires to be run in web server due to CORS (App processes images).
 
 You will need to have nodejs in order to run this demo.  
 For example you can use node.js based http-server. To run server this command in app directory:
+</br>
 <code>
 npx http-server@13.0.2
 </code>
+</br>
 Then open  http://127.0.0.1:8080  in browser
 
 </br>
 
 ## Libraries, Technologies
-<hr>
+
 
 <ul>
 <li>JQuery: 3.6.0</li>
